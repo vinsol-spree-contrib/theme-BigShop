@@ -2,6 +2,8 @@
 
 * {
   border-radius: 0 !important;
+  outline: none !important;
+  outline: hidden !important;
 }
 
 a {
@@ -40,6 +42,9 @@ h4, .h4 {
 }
 .form-control {
   border-color: $primary-border;
+}
+.line_item_quantity {
+  min-width: 60px;
 }
 .lead {
   font-size: 16px;
@@ -116,6 +121,13 @@ h4, .h4 {
   }
 }
 
+.d-ib {
+  display: inline-block;
+}
+.mt15 {
+  margin-top: 15px;
+}
+
 a.il, .il a {
   text-decoration: underline;
   color: $primary-hover;
@@ -158,6 +170,15 @@ a.il, .il a {
 
 .form-control {
   box-shadow: none !important;
+  &.error {
+    border-color: red !important;
+  }
+}
+label.error {
+  padding-top: 2px;
+  font-weight: $font-light;
+  color: red;
+  font-size: 12px;
 }
 .panel.panel-default {
   border: none;
@@ -179,6 +200,7 @@ a.il, .il a {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   justify-content: center;
   -webkit-justify-content: center;
 
@@ -205,9 +227,29 @@ a.il, .il a {
     .info {
       display: block;
       padding: 5px 0 10px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }
+
+.product_image_area {
+  height: 230px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  img {
+    max-height: 230px;
+  }
+}
+
+
 
 .list-group {
   border-bottom: solid 1px $grey-200;
@@ -364,7 +406,7 @@ a.il, .il a {
 
 .product-section-title {
   font-size: 24px !important;
-  margin: 20px 0 10px 0;
+  margin: 40px 0 10px 0;
 }
 
 table.table-striped {
@@ -395,6 +437,25 @@ table.table-striped {
     padding: 0 15px 10px 0;
   }
 }
+
+#main-image {
+  .panel-body {
+    height: 400px;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    img {
+      max-height: 400px;
+    }
+  }
+}
+
+
 @media (max-width: $tablet) {
   #products {
     .product-list-item {
@@ -403,6 +464,9 @@ table.table-striped {
   }
 }
 @media (max-width: $mobile) {
+  #breadcrumbs {
+    display: none;
+  }
   .progress-steps {
     margin-bottom: 20px;
     display: flex;
@@ -421,4 +485,5 @@ table.table-striped {
     }
   }
 }
+
 

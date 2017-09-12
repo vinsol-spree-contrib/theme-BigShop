@@ -15,16 +15,7 @@
 </nav>
 <div class="main_menu">
   <a href="javascript:void(0);" class="close_this main_menu_toggle"></a>
-<!--   <ul class="common-header-navigation main_navigation top-corners flex-center">
-    <li><a href="#">Electronics </a></li>
-    <li><a href="#">Appliances </a></li>
-    <li><a href="#">Men </a></li>
-    <li><a href="#">Women </a></li>
-    <li><a href="#">Baby & Kids </a></li>
-    <li><a href="#">Home & Furniture </a></li>
-    <li><a href="#">Books & More </a></li>
-    <li><a href="#">Offer Zone</a></li>
-  </ul> -->
+
   <% if @taxonomies.present? %>
     <div class="main_navigation">
       <% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>

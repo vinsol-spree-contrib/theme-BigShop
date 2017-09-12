@@ -23,8 +23,8 @@ $(document).on('ready', function() {
     $("#top-nav-bar").toggleClass("userbar_open");
   });
 
-    $(".main_menu_toggle").click(function(){
-    $(".main_menu").toggleClass("main_menu_open");
+    $(".sidebar_toggle").click(function(){
+    $("#sidebar").toggleClass("sidebar_open");
   });
 
 });
