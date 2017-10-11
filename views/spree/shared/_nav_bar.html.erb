@@ -5,7 +5,7 @@
   <ul id="nav-bar" class="nav navbar-nav" data-hook>
     <li id="link-to-cart" data-hook>
       <noscript>
-        <%= link_to Spree.t(:cart), '/cart' %>
+        <%= link_to_cart %>
       </noscript>
     </li>
     <script>Spree.fetch_cart()</script>
