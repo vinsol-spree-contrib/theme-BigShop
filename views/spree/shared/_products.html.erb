@@ -18,6 +18,7 @@
 
 <% if products.any? %>
   <div id="products" class="product-list" data-hook>
+    <%= render partial: 'spree/products/product', collection: products, locals: { taxon: @taxon } %>
     <% products.each do |product| %>
       <% url = spree.product_path(product, taxon_id: @taxon.try(:id)) %>
       <div id="product_<%= product.id %>" data-hook="products_list_item" class="product-list-item" itemscope itemtype="https://schema.org/Product">
