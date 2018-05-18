@@ -32,7 +32,12 @@ b, strong, th, label {
 h4, .h4 {
   font-weight: $font-regular;
 }
-
+.pos-rel {
+  position: relative;
+}
+.vmid {
+  vertical-align: middle !important;
+}
 .well {
   background-color: $primary-white;
   border: solid 10px $grey-100;
@@ -65,6 +70,7 @@ h4, .h4 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  min-height: calc(100vh - 375px);
 }
 
 .alert {
@@ -455,12 +461,27 @@ table.table-striped {
   }
 }
 
+.use_billing {
+  position: absolute;
+  right: 0;
+  top: -37px;
+}
+
+.line-item-description {
+  display: inline-block;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 
 @media (max-width: $tablet) {
   #products {
     .product-list-item {
       min-width: 230px;
     }
+  }
+  .line-item-description {
+    width: 200px;
   }
 }
 @media (max-width: $mobile) {
@@ -484,6 +505,14 @@ table.table-striped {
       border-radius: 30px !important;
     }
   }
+  .use_billing {
+    position: static;
+  }
+  .modal-open {
+    position: fixed;
+  }
 }
+
+
 
 
