@@ -18,8 +18,8 @@
         <div class="panel-heading">
           <h3 class="panel-title"><%= Spree.t(:shipping_address) %></h3>
         </div>
-        <div class="panel-body">
-          <p class="field checkbox" data-hook="use_billing">
+        <div class="panel-body pos-rel">
+          <p class="field checkbox use_billing" data-hook="use_billing">
             <%= label_tag :order_use_billing, id: 'use_billing' do %>
               <%= check_box_tag 'order[use_billing]', '1', @order.shipping_eq_billing_address? %>
               <%= Spree.t(:use_billing_address) %>

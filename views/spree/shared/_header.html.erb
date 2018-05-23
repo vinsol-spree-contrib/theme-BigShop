@@ -23,10 +23,18 @@
       <%= link_to (image_tag 'logo.svg'), root_path %>
     </div>
     <div class="mobile_bar hidden-lg hidden-md">
-      <a href="javascript:void(0);" class="<%= !content_for?(:sidebar) ? "hidden sidebar_toggle" : "col-md-9 sidebar_toggle" %>"><i class="icon-menu"></i></a>
-      <a href="javascript:void(0);" class="search_toggle"><i class="icon-search"></i></a>
-      <a href="javascript:void(0);" class="userbar_toggle"><i class="icon-cart"></i></a>
-      <a href="javascript:void(0);" class="userbar_toggle"><i class="icon-user"></i></a>
+      <a href="javascript:void(0);" class="<%= !content_for?(:sidebar) ? "hidden sidebar_toggle" : "col-md-9 sidebar_toggle" %>">
+        <%= image_tag 'icon-menu.png', class: 'center-block' %>
+      </a>
+      <a href="javascript:void(0);" class="search_toggle">
+        <%= image_tag 'icon-search.png', class: 'center-block' %>
+      </a>
+      <a href="javascript:void(0);" class="userbar_toggle">
+        <%= image_tag 'icon-cart.png', class: 'center-block' %>
+      </a>
+      <a href="javascript:void(0);" class="userbar_toggle">
+        <%= image_tag 'icon-user.png', class: 'center-block' %>
+      </a>
     </div>
     <%= render partial: 'spree/shared/nav_bar' %>
 

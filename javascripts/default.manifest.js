@@ -17,14 +17,20 @@ $(document).on('ready', function() {
   // For Header Responsive
   $(".search_toggle").click(function(){
     $(".search_area").toggleClass("search_open");
+    $("body").toggleClass("modal-open");
+    $(".responsive-overlay").toggleClass("open");
   });
 
   $(".userbar_toggle").click(function(){
     $("#top-nav-bar").toggleClass("userbar_open");
+    $("body").toggleClass("modal-open");
+    $(".responsive-overlay").toggleClass("open");
   });
 
-    $(".sidebar_toggle").click(function(){
+  $(".sidebar_toggle").click(function(){
     $("#sidebar").toggleClass("sidebar_open");
+    $("body").toggleClass("modal-open");
+    $(".responsive-overlay").toggleClass("open");
   });
 
 });
